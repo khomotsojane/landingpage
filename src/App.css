@@ -1,0 +1,139 @@
+
+.App {
+  margin: 0;
+  padding: 0;
+  height: 99vh;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+
+
+.App > div[id="left"] {
+  background-image: url(./left.png);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  /* background-color:hsl(226.18deg 73.33% 55.88%); */
+  color: white;
+}
+
+.App  > div  > img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.App > div[id="left"] > div > h1 {
+  translate: 0% 200px;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.App > div[id="left"] > div > p {
+  translate: 20% 200px;
+  text-align: left;
+  width: 66%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  line-height: 20%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav > div[id="links"] {
+  padding-left: 4%;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin-top: 30px;
+}
+
+nav > div[id="links"] > ul {
+  list-style-type: none;
+}
+
+nav > div[id="links"] > ul > li {
+  float: left;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+nav > div[id="links"] > ul > li > a {
+  color: rgb(112, 112, 112);
+  text-decoration: none;
+  font-size: larger;
+}
+
+nav > div[id="links"] > ul > li > .active {
+  color: hsl(226.18deg 73.33% 55.88%);
+  font-weight: 700;
+}
+
+nav > div[id="links"] > button {
+  background-color: white;
+  color:hsl(226.18deg 73.33% 55.88%);
+  font-size: larger;
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.3);
+  box-shadow: 5px 5px rgba(0,0,0,.3);
+}
+
+nav > div[id="icons"]  {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  line-height: 10px;
+}
+
+nav > div[id="icons"] > h1 {
+  padding-left: 1%;
+  color: white;
+  line-height: 200%;
+
+}
+
+nav > div[id="icons"] > img{
+  margin-top: 5px;
+  margin-left: 30px;
+  width: 80%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .App {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 90%;
+  }
+
+  nav > div[id="links"] {
+    height: 90%;
+
+  }
+
+
+
+  nav > div[id="links"] > ul {
+    font-size: medium;
+    float: clear;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 30%;
+    row-gap: 100%;
+  }
+
+  .App > div[id="left"] > div > p {
+    color: hsl(226.18deg 73.33% 55.88%);
+  }
+}
